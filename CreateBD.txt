@@ -6,7 +6,7 @@ USE School;
 
 -- Create the 'Matter' table
 CREATE TABLE Matter (
-    codemat INT PRIMARY KEY,
+    codemat CHAR(100) PRIMARY KEY,
     wording VARCHAR(255),
     coef FLOAT
 );
@@ -27,7 +27,7 @@ CREATE TABLE Test (
     numtest INT PRIMARY KEY,
     testdate DATE,
     place VARCHAR(255),
-    codemat INT,
+    codemat CHAR(100),
     FOREIGN KEY (codemat) REFERENCES Matter(codemat)
 );
 
