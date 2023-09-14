@@ -8,7 +8,7 @@ USE School;
 CREATE TABLE Matter (
     codemat INT PRIMARY KEY,
     wording VARCHAR(255),
-    coef INT
+    coef FLOAT
 );
 
 -- Create the 'Student' table
@@ -35,7 +35,7 @@ CREATE TABLE Test (
 CREATE TABLE Notation (
     numstud INT,
     numtest INT,
-    score INT,
+    score FLOAT,
     PRIMARY KEY (numstud, numtest),
     FOREIGN KEY (numstud) REFERENCES Student(numstud),
     FOREIGN KEY (numtest) REFERENCES Test(numtest)
